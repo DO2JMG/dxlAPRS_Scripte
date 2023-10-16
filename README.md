@@ -1,6 +1,6 @@
 # dxlAPRS_Scripte
 
-### Unpack and compile :
+### Download and unpack :
 
 ```
   git clone https://github.com/DO2JMG/dxlAPRS_Scripte.git
