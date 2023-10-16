@@ -14,7 +14,7 @@ command -v ${SCANNER} >/dev/null 2>&1 || { echo "I miss " ${SCANNER} >&2; exit 1
 function startscanner {
   echo "Starte scanner $i"
 
-  ${SCANNER} -p ${lport} -u ${uport} -f ${sf} -s 1500 -v -o ${SDRCFG} -b ${file_blacklist} -w ${file_whitelist} -q 50 -n ${level} &
+  ${SCANNER} -p ${scan_sdrtst} -u ${scan_soneudp} -f ${sf} -s 1500 -v -o ${SDRCFG} -b ${file_blacklist} -w ${file_whitelist} -q 50 -n ${level} &
 
   scanner_pid=$!
   echo $scanner_pid > $PIDFILE
@@ -59,8 +59,8 @@ if [ "x$1" == "xstop" ];then
 fi
 
 for i in ${activesdr[@]}; do 
-  eval lport="\${$i[lport]}"
-  eval uport="\${$i[uport]}"
+  eval scan_sdrtst="\${$i[scan_sdrtst]}"
+  eval scan_soneudp="\${$i[scan_soneudp]}"
   eval sf="\${$i[sf]}"
   eval level="\${$i[level]}"
 
