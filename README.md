@@ -23,3 +23,11 @@ Scripts for dxlAPRS to decode radiosondes an upload to wettersonde.net
 ```
   nano ws-options.conf
 ```
+
+### Give  file permissions :
+
+```
+  sudo chmod +x dxlclient.sh
+  sudo chmod +x dxlserver.sh
+  sudo chmod +x dxlscanner.sh
+```
