@@ -15,3 +15,9 @@
   mkdir calibrations
   mkdir fifos
 ```
+
+### Configuration :
+
+```
+  nano ws-options.conf
+```
