@@ -14,7 +14,7 @@ command -v ${SCANNER} >/dev/null 2>&1 || { echo "Ich vermisse " ${SCANNER} >&2; 
 function startscanner {
   echo "Starte scanner $i"
 
-  ${SCANNER} -p ${lport} -u ${uport} -f ${sf} -s 1500 -v -o ${SDRCFG} -b /home/wettersonde/ws/blacklist.txt -w /home/wettersonde/ws/whitelist.txt -q 50 -n ${level} &
+  ${SCANNER} -p ${lport} -u ${uport} -f ${sf} -s 1500 -v -o ${SDRCFG} -b ${file_blacklist} -w ${file_whitelist} -q 50 -n ${level} &
 
   scanner_pid=$!
   echo $scanner_pid > $PIDFILE
