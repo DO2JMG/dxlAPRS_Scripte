@@ -1,6 +1,6 @@
 # dxlAPRS_Scripte
 
-Scripts for dxlAPRS to decode radiosondes an upload to wettersonde.net
+Scripts for dxlAPRS to decode radiosondes and upload to wettersonde.net
 
 ### Download and unpack :
 
