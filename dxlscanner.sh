@@ -8,7 +8,7 @@ bindir=${workingdir}/bin
 
 SCANNER=${bindir}/scanner
 
-command -v ${SCANNER} >/dev/null 2>&1 || { echo "Ich vermisse " ${SCANNER} >&2; exit 1; }
+command -v ${SCANNER} >/dev/null 2>&1 || { echo "I miss " ${SCANNER} >&2; exit 1; }
 
 
 function startscanner {
