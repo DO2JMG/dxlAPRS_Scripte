@@ -30,4 +30,5 @@ Scripts for dxlAPRS to decode radiosondes and upload to wettersonde.net
   sudo chmod +x dxlclient.sh
   sudo chmod +x dxlserver.sh
   sudo chmod +x dxlscanner.sh
+  sudo chmod +x dxlrinex.sh
 ```
