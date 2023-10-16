@@ -26,7 +26,7 @@ command -v ${SDRTST} >/dev/null 2>&1 || { echo "I miss " ${SDRTST} >&2; exit 1; 
 function startsondeudp {
   echo "Starte sondeudp $i"
 
-  ${SONDEUDP} -f 26000 -o ${FIFO} -I ${objectcall} -u 127.0.0.1:40000 -M 127.0.0.1:${scan_soneudp} -c 0 -v -n 0 -W 5 2>&1 >> ${LOGFILE} &
+  ${SONDEUDP} -f 26000 -o ${FIFO} -I ${objectcall} -u 127.0.0.1:40000 -M 127.0.0.1:${scan_sondeudp} -c 0 -v -n 0 -W 5 2>&1 >> ${LOGFILE} &
 
   echo $sudp_pid > $PIDFILE
   sleep 1
@@ -135,7 +135,7 @@ fi
 ### check for sondeudp
 for i in ${activesdr[@]}; do 
 
-  eval scan_soneudp="\${$i[scan_soneudp]}" 
+  eval scan_sondeudp="\${$i[scan_sondeudp]}" 
   
   FIFO=${FIFOPATH}/multichan-${i}
   LOGFILE=/tmp/sondeudp-${i}.log
