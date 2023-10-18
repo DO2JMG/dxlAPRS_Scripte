@@ -27,6 +27,8 @@ function startsondeudp {
   echo "Starte sondeudp $i"
 
   ${SONDEUDP} -f 26000 -o ${FIFO} -I ${objectcall} -u 127.0.0.1:40000 -M 127.0.0.1:${scan_sondeudp} -c 0 -v -n 0 -W 5 2>&1 >> ${LOGFILE} &
+  
+  sudp_pid=$!
 
   echo $sudp_pid > $PIDFILE
   sleep 1
