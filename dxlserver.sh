@@ -45,7 +45,7 @@ function startsmod {
 function startudpbox {
   echo "Start udpbox"
 
-  ${UDPBOX} -v -R 127.0.0.1:4030 -l 127.0.0.1:4010 -l 127.0.0.1:4050 2>&1 >> ${LOGFILE} &
+  ${UDPBOX} -v -R 127.0.0.1:4010 -l 127.0.0.1:4010 -l 127.0.0.1:4050 2>&1 >> ${LOGFILE} &
   ubox_pid=$!
   echo $ubox_pid > $PIDFILE
 }
