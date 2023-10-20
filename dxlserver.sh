@@ -36,7 +36,7 @@ function startudpgatesecond {
 
 function startsmod {
   echo "Start sondemod"
-  ${SONDEMOD} -X ${workingdir}/encrypt.txt -x ${workingdir}/rinex.txt -J 127.0.0.1:4099 -t ${commentfile} -v -V -o 40000 -I ${objectcall} -r 127.0.0.1:4010 -b 20 -B 5 -A 2000 -L 6=DFM06,7=PS15,A=DFM09,B=DFM17,C=DFM09P,D=DFM17,FF=DFMx -d -p 2  2>&1 >> ${LOGFILE} &
+  ${SONDEMOD} -X ${workingdir}/encrypt.txt -x ${workingdir}/rinex.txt -J 127.0.0.1:4099 -t ${commentfile} -v -V -o 40000 -I ${objectcall} -r 127.0.0.1:4030 -b 20 -B 5 -A 2000 -L 6=DFM06,7=PS15,A=DFM09,B=DFM17,C=DFM09P,D=DFM17,FF=DFMx -d -p 2  2>&1 >> ${LOGFILE} &
   
   smod_pid=$!
   echo $smod_pid > $PIDFILE
@@ -45,7 +45,7 @@ function startsmod {
 function startudpbox {
   echo "Start udpbox"
 
-  ${UDPBOX} -v -R 127.0.0.1:4010 -l 127.0.0.1:4010 -l 127.0.0.1:4050 2>&1 >> ${LOGFILE} &
+  ${UDPBOX} -v -R 127.0.0.1:4030 -l 127.0.0.1:4010 -l 127.0.0.1:4050 2>&1 >> ${LOGFILE} &
   ubox_pid=$!
   echo $ubox_pid > $PIDFILE
 }
