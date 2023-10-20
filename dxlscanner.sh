@@ -14,7 +14,7 @@ command -v ${SCANNER} >/dev/null 2>&1 || { echo "I miss " ${SCANNER} >&2; exit 1
 function startscanner {
   echo "Starte scanner $i"
 
-  ${SCANNER} -p ${scan_sdrtst} -u ${scan_sondeudp} -f ${sf} -s 1500 -v -o ${SDRCFG} -b ${file_blacklist} -w ${file_whitelist} -q 50 -n ${level} &
+  ${SCANNER} -p ${scan_sdrtst} -u ${scan_sondeudp} -f ${sf} -s 1500 -v -o ${SDRCFG} -b ${workingdir}/${file_blacklist} -w ${workingdir}/${file_whitelist} -q 50 -n ${level} &
 
   scanner_pid=$!
   echo $scanner_pid > $PIDFILE
