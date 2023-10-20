@@ -100,7 +100,7 @@ checkproc
 returnval=$?
 if [ $returnval -eq 1 ];then
   : > ${LOGFILE}
- # startudpbox
+ startudpbox
 fi
 
 # ## check for udpgate
