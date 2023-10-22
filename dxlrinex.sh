@@ -1,7 +1,5 @@
 #!/bin/bash
 
-workingdir="$( cd "$(dirname "$0")" ; pwd -P )"
-
 ${workingdir}="$( cd "$(dirname "$0")" ; pwd -P )"
 
 cd /tmp
